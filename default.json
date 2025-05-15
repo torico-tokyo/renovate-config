@@ -1,0 +1,19 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "デフォルトで読み込まれる設定",
+  "dependencyDashboard": false,
+  "extends": [
+    "config:base",
+    "github>torico-tokyo/renovate-config:defaultSchedule"
+  ],
+  "labels": [
+    "renovate"
+  ],
+  "rebaseWhen": "conflicted",
+  "major": {
+    "enabled": false
+  },
+  "lockFileMaintenance": {
+    "enabled": true
+  }
+}

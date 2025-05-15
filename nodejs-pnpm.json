@@ -1,0 +1,31 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Node.js pnpm の設定",
+  "enabledManagers": ["npm", "asdf"],
+  "rangeStrategy": "pin",
+  "minimumReleaseAge": "7 days",
+  "postUpdateOptions": ["pnpmDedupe"],
+  "regexManagers": [
+    {
+      "fileMatch": "^\\.tool-versions$",
+      "matchStrings": ["nodejs (?<currentValue>[^\\s]+)"],
+      "depNameTemplate": "node",
+      "datasourceTemplate": "node"
+    },
+    {
+      "fileMatch": "^\\.tool-versions$",
+      "matchStrings": ["pnpm (?<currentValue>[^\\s]+)"],
+      "depNameTemplate": "pnpm",
+      "datasourceTemplate": "pnpm"
+    }
+  ],
+  "packageRules": [
+    {
+      "matchDatasources": ["npm"],
+      "matchPackagePatterns": ["^@types/.*$"],
+      "groupName": "@types",
+      "groupSlug": "types",
+      "automerge": true
+    }
+  ]
+}

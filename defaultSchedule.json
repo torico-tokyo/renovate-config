@@ -1,0 +1,8 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "アップデートのスケジュール設定。日本時間の毎月1日の9時以降に実行するように設定",
+  "timezone": "Asia/Tokyo",
+  "schedule": "before 9am on the first day of the month",
+  "prHourlyLimit": 0,
+  "prConcurrentLimit": 5
+}
