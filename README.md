@@ -8,7 +8,9 @@ TORICO Renovate Shareable Config Presets
 
 ## 設定方法
 
-renovate.json のextends に設定して使う  
+.github リポジトリにrenovate.json を追加して、リポジトリに内容にあった設定をextends に指定して使用する。
+
+### 共通の設定
 
 ```json
 {
@@ -17,8 +19,7 @@ renovate.json のextends に設定して使う
 }
 ```
 
-
-Node.js + pnpm のプロジェクトでは以下の設定で使う。
+### Node.js + pnpm
 
 ```json
 {
