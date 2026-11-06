@@ -1,0 +1,11 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "GitHub Packages の社内 npm パッケージ（@torico-tokyo）を取得できるようにする設定。Mend の org secret に TORICO_GITHUB_TOKEN（read:packages 権限の classic PAT）を登録してから使う",
+  "hostRules": [
+    {
+      "matchHost": "npm.pkg.github.com",
+      "hostType": "npm",
+      "token": "{{ secrets.TORICO_GITHUB_TOKEN }}"
+    }
+  ]
+}
